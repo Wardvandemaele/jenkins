@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t wardvandemaele/api:latest .'
+                sh 'docker -v -t wardvandemaele/api:latest .'
             }
         }
         stage('Push to Docker Hub') {
