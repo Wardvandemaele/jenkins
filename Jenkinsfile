@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker -t api .'
+                sh 'docker tag api .'
             }
         }
         stage('Push to Docker Hub') {
