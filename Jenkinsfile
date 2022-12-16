@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker -v
+                sh 'docker -v'
                 sh 'docker -t api .'
             }
         }
