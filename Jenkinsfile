@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker -t wardvandemaele/api:latest .'
+                sh 'docker -t api .'
             }
         }
         stage('Push to Docker Hub') {
