@@ -9,7 +9,7 @@ pipeline {
         stage('Push to Docker Hub') {
             steps {
                 sh 'docker tag api wardvandemaele/api:latest'
-                sh 'docker login -u $dockerhub_USR --password-stdin'
+                sh 'echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin'
                 sh 'docker push wardvandemaele/api:latest'
             }
         }
