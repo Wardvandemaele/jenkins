@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t api .'
+                sh 'sudo docker build -t api .'
             }
         }
         stage('Push to Docker Hub') {
