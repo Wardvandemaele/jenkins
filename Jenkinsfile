@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        registry = "wardvandemaele/api:latest"
+        registry = "wardvandemaele/api"
         registryCredential = 'dockerhub'
         dockerImage = ''
     }
@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    dockerImage = docker.build registry
+                    dockerImage = docker.build registry + ":latest"
                 }
             }
         }
